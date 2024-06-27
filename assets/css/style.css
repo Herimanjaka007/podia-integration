@@ -1,59 +1,74 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
 }
 
-p{
+p {
     color: #555;
     font-size: 1.1rem;
     line-height: 1.6;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #252525;
+    text-align: center;
+}
+
+section:first-of-type :is(h1, p){
+    text-align: start;
 }
 
 /* header */
 
-.header{
+.header {
     display: flex;
     align-items: center;
     gap: 1rem;
     padding: .2rem 5rem;
 }
 
-.header a{
+.header a {
     color: #252525;
     text-decoration: none;
     display: inline-block;
 }
 
-.header a, button{
+.header a,
+button {
     padding: 1rem .9rem;
     border-radius: 2rem;
     border: none;
 }
 
-button{
+button {
     background-color: #4b2aad;
     color: #eee;
     font-size: 1rem;
 }
-.header button:hover{
+
+.header button:hover {
     cursor: pointer;
 }
 
-.header a:hover:not(a:first-child){
+.header a:hover:not(a:first-child) {
     background-color: #eee;
 }
 
-.header a:nth-last-child(2){
+.header a:nth-last-child(2) {
     margin-inline-start: auto;
 }
 
-.header .brand{
+.header .brand {
     color: #4b2aad;
     font-size: 1.5rem;
     font-weight: 900;
@@ -61,26 +76,135 @@ button{
 
 /* main */
 
-.main{
+.main {
     padding: 5rem;
 }
 
-.main section:first-child{
+.main section:first-child,
+.section__flex {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
-.main img{
+.main img {
     width: 35vw;
     border-radius: 5px;
     align-self: flex-start;
 }
 
-.main h1{
+.main h1 {
     font-size: 3.1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.main article p:first-of-type{
+.main article p {
     margin: 2rem 0;
+}
+
+.main>section {
+    margin-bottom: 6rem;
+}
+
+.main article {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+section h2+p {
+    text-align: center;
+}
+
+
+/* card */
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 26vw;
+    padding: 3rem 1rem;
+    margin: 2rem 0;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.card :is(h3, p) {
+    text-align: center;
+}
+
+.card .card__icon {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto;
+}
+
+.card .card__title {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.main .card p {
+    font-size: .9rem;
+}
+
+.section__flex {
+    padding: 4rem 0;
+    align-items: center;
+    gap: 4rem;
+}
+
+.section__flex :is(h3, p){
+    text-align: start;
+}
+.comment> :nth-child(2) {
+    margin: 2rem 0;
+}
+
+.comment img {
+    width: 15vw;
+    display: block;
+    margin: auto;
+}
+.podia__account{
+    background: #201445;
+    padding: 4rem;
+    border-radius: 10px;
+}
+
+.podia__account > *{
+    color: white;
+}
+
+.podia__account button{
+    display: block;
+    margin: 2rem auto;
+}
+
+.footer{
+    padding: 4rem 2rem;
+    background: #f5efeb;
+}
+
+.footer section{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.footer a{
+    color: #555;
+}
+
+.footer p{
+    color: #252525;
+}
+
+.footer > p{
+    margin-top: 3rem;
 }
