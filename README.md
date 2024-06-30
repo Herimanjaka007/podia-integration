@@ -10,5 +10,5 @@ Source de l'exercice: https://www.frontendpractice.com/projects/podia
 
 Technologie:
 ------------
-  *HTML
-  *CSS
+  * HTML
+  * CSS
