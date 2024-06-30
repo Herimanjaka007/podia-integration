@@ -24,7 +24,7 @@ h3 {
     text-align: center;
 }
 
-section:first-of-type :is(h1, p){
+section:first-of-type :is(h1, p) {
     text-align: start;
 }
 
@@ -34,38 +34,51 @@ section:first-of-type :is(h1, p){
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: .2rem 5rem;
+    padding: .8rem   5rem;
 }
 
 .header a {
     color: #252525;
     text-decoration: none;
     display: inline-block;
+    transition-property: background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: .005s;
 }
 
 .header a,
 button {
-    padding: 1rem .9rem;
+    padding: .8rem 1.2rem;
     border-radius: 2rem;
     border: none;
-}
-
-button {
-    background-color: #4b2aad;
-    color: #eee;
-    font-size: 1rem;
-}
-
-.header button:hover {
-    cursor: pointer;
 }
 
 .header a:hover:not(a:first-child) {
     background-color: #eee;
 }
 
+.header a:first-child{
+    padding: 0;
+}
+
 .header a:nth-last-child(2) {
     margin-inline-start: auto;
+}
+
+
+button {
+    background-color: #4b2aad;
+    color: #eee;
+    font-size: 1rem;
+    opacity: .9;
+    transition: transform opacity .3s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    opacity: 1;
 }
 
 .header .brand {
@@ -159,9 +172,10 @@ section h2+p {
     gap: 4rem;
 }
 
-.section__flex :is(h3, p){
+.section__flex :is(h3, p) {
     text-align: start;
 }
+
 .comment> :nth-child(2) {
     margin: 2rem 0;
 }
@@ -171,40 +185,41 @@ section h2+p {
     display: block;
     margin: auto;
 }
-.podia__account{
+
+.podia__account {
     background: #201445;
     padding: 4rem;
     border-radius: 10px;
 }
 
-.podia__account > *{
+.podia__account>* {
     color: white;
 }
 
-.podia__account button{
+.podia__account button {
     display: block;
     margin: 2rem auto;
 }
 
-.footer{
-    padding: 4rem 2rem;
+.footer {
+    padding: 4rem 5rem;
     background: #f5efeb;
 }
 
-.footer section{
+.footer section {
     display: flex;
     gap: 2rem;
     align-items: center;
 }
 
-.footer a{
+.footer a {
     color: #555;
 }
 
-.footer p{
+.footer p {
     color: #252525;
 }
 
-.footer > p{
+.footer>p {
     margin-top: 3rem;
 }
