@@ -1,6 +1,8 @@
 Podia integration
 =================
 
+View Live: (https://podia-by-herimanjaka.netlify.app/)
+
 About:
 ------
   Ce dépôt contient une implémentation HTML et CSS d'une page du site web Frontend Practice.
